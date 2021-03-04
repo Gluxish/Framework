@@ -21,6 +21,18 @@ class SpyGlass {
     };
 };
 
+class Life_Client_Utilities {
+    tag = "life_util";
+
+    class Main {
+        file = "core\utils";
+        class isNumber {};
+        class index {};
+        class playerQuery {};
+        class terrainSort {};
+    };
+};
+
 class Life_Client_Core {
     tag = "life";
 
@@ -92,7 +104,6 @@ class Life_Client_Core {
 
     class Civilian {
         file = "core\civilian";
-        class civLoadout {};
         class civMarkers {};
         class demoChargeTimer {};
         class freezePlayer {};
@@ -120,7 +131,6 @@ class Life_Client_Core {
         class containerInvSearch {};
         class copInteractionMenu {};
         class copLights {};
-        class copLoadout {};
         class copMarkers {};
         class copSearch {};
         class copSiren {};
@@ -150,8 +160,7 @@ class Life_Client_Core {
         class bankTransfer {};
         class bankWithdraw {};
         class displayHandler {};
-        class gangDeposit {};
-        class gangWithdraw {};
+        class gangBankResponse {};
         class garageLBChange {};
         class impoundMenu {};
         class progressBar {};
@@ -166,6 +175,7 @@ class Life_Client_Core {
         class spawnPointCfg {};
         class spawnPointSelected {};
         class unimpound {};
+        class useGangBank {};
         class vehicleGarage {};
         class wireTransfer {};
     };
@@ -180,17 +190,18 @@ class Life_Client_Core {
         class checkMap {};
         class clearVehicleAmmo {};
         class dropItems {};
-        class escInterupt {};
+        class onGameInterrupt {};
         class fetchCfgDetails {};
         class fetchDeadGear {};
         class fetchVehInfo {};
         class isDamaged {};
+        class getInMan {};
+        class getOutMan {};
         class giveDiff {};
         class handleDamage {};
         class handleInv {};
         class handleItem {};
         class hideObj {};
-        class hudSetup {};
         class hudUpdate {};
         class inventoryClosed {};
         class inventoryOpened {};
@@ -214,13 +225,18 @@ class Life_Client_Core {
         class revealObjects {};
         class saveGear {};
         class simDisable {};
+        class startLoadout {};
         class stripDownPlayer {};
         class teleport {};
         class whereAmI {};
+        class moveIn {};
     };
 
     class Gangs {
         file = "core\gangs";
+        class clientGangKick {};
+        class clientGangLeader {};
+        class clientGangLeft {};
         class createGang {};
         class gangCreated {};
         class gangDisband {};
@@ -275,7 +291,6 @@ class Life_Client_Core {
         file = "core\medical";
         class deathScreen {};
         class medicLights {};
-        class medicLoadout {};
         class medicMarkers {};
         class medicRequest {};
         class medicSiren {};
@@ -301,6 +316,7 @@ class Life_Client_Core {
     class Player_Menu {
         file = "core\pmenu";
         class cellphone {};
+        class clientMessage {};
         class giveItem {};
         class giveMoney {};
         class keyDrop {};
@@ -310,6 +326,7 @@ class Life_Client_Core {
         class p_updateMenu {};
         class pardon {};
         class removeItem {};
+        class sendMessage {};
         class s_onChar {};
         class s_onCheckedChange {};
         class s_onSliderChange {};
@@ -333,6 +350,7 @@ class Life_Client_Core {
         class chopShopMenu {};
         class chopShopSelection {};
         class chopShopSell {};
+        class chopShopSold {};
         class clothingFilter {};
         class clothingMenu {};
         class fuelLBchange {};
@@ -356,6 +374,7 @@ class Life_Client_Core {
     class Vehicle {
         file = "core\vehicle";
         class addVehicle2Chain {};
+        class clientGetKey {};
         class colorVehicle {};
         class deviceMine {};
         class FuelRefuelcar {};
